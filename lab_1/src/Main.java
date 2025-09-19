@@ -23,12 +23,17 @@ public class Main {
         showMatrix(s1);
     }
 
-
+    /**
+     * Возвращает случайное число в промежутке [min; max)
+     */
     public static float getRandomInRange(float min, float max) {
         return (float) (Math.random() * ((max - min) + 1)) + min;
     }
 
 
+    /**
+     * Вычисляет элемент матрицы по переданным элементам массивов s и x
+     */
     public static double calcNewElement(int s, float x) {
         if (s == 17) {
             return Math.asin(Math.cos(Math.atan(Math.pow((x - 0.5) / 27, 2))));
@@ -39,7 +44,9 @@ public class Main {
         }
     }
 
-
+    /**
+     * Выводит на экран матрицу с 3 знаками после запятой
+     */
     public static void showMatrix(double[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
